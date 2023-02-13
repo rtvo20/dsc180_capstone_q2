@@ -1,0 +1,4 @@
+{
+    "dockerhub-id": "rvo1/quarter1_submission",
+    "build-script": "python run.py"
+}
