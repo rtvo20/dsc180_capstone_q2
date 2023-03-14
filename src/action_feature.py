@@ -218,7 +218,7 @@ def append_outputs(output_df, action_df):
     
     row_template = action_df.iloc[-1].copy()
     row_template.loc[:]=np.nan
-    row_template['action'] = 'char'
+    row_template['action'] = 'char_output'
     row_template['sample_id'] = action_df['sample_id'].iloc[0]
     row_template['batch_id'] = action_df['batch_id'].iloc[0]
     
