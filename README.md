@@ -61,3 +61,12 @@ More detailed instructions are below, however an overview of the process to repr
 
 ![image](https://user-images.githubusercontent.com/59627502/218383326-7880d998-0aeb-4b63-8ce6-24aad0ae5f85.png)
 * This is our result from a graph containing multiple samples, but the test data will contain just 1 sample.
+
+## Additional features
+At the final stage of our project, we moved from using Neo4j Docker to Neo4j Desktop, as this version has more practical use for the lab team. Our run.py and this README file contain instructions and functionality for Neo4j Docker in order to support reproducibility; however we have included a `preprocessing.ipynb` that contains several features used with Neo4j Desktop that is useful in practice for the lab team. 
+To briefly describe those features:
+  * Saving `action`, `chem`, and `link` CSV files along with cypher files to the appropriate folders within the local Neo4j Desktop installation
+    * CSV files are saved to the `import` folder within the Neo4j Desktop database directory
+    * Cypher files are saved to the `bin` folder within the Neo4j Desktop database directory 
+  * Version control to keep track of batches of data that have already been processed, to avoid unnecessary redundant processing of batchs.
+  * Deleting CSV files after they are used to load data into Neo4j to reduce clutter in file storage.
